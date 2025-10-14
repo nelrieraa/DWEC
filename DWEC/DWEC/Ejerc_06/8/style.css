@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 50px;
+}
+
+.galeria {
+  display: inline-block;
+}
+
+#imagenPrincipal {
+  width: 600px;
+  height: 400px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.miniaturas img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.miniaturas img:hover {
+  opacity: 1;
+}
