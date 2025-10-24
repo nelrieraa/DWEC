@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Práctica 3 - Planificador de Itinerarios</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4 text-center">Planificador de Itinerarios de Viaje</h1>
+
+    <div class="row g-3">
+ 
+      <aside class="col-lg-3 col-md-4">
+        <div class="card shadow-sm p-3">
+          <h5>Filtros</h5>
+
+          <div class="mb-3">
+            <label for="destinoSelect" class="form-label">Destino</label>
+            <select id="destinoSelect" class="form-select">
+              <option value="Todos">Todos</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label d-block">Tipo de actividad</label>
+            <div id="tiposContainer" class="d-flex flex-column gap-1"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="precioRange" class="form-label">Precio máximo: <span id="precioValor">0</span> €</label>
+            <input id="precioRange" type="range" class="form-range" min="0" max="500" step="1" />
+          </div>
+
+          <button id="resetFiltros" class="btn btn-outline-secondary w-100">Restablecer filtros</button>
+        </div>
+      </aside>
+
+     
+      <main class="col-lg-6 col-md-8">
+        <div class="card shadow-sm p-3 mb-3">
+          <h5>Actividades disponibles</h5>
+          <div id="actividadesGrid" class="row g-3 mt-2"></div>
+        </div>
+      </main>
+
+
+      <aside class="col-lg-3">
+        <div class="card shadow-sm p-3 mb-3">
+          <h5>Itinerario</h5>
+          <ul id="itinerarioList" class="list-group mb-2"></ul>
+
+          <div class="mb-2">
+            <p class="mb-1">Coste total: <strong id="costeTotal">0.00</strong> €</p>
+            <p class="mb-1">Duración total: <strong id="duracionTotal">0</strong> h</p>
+            <p class="mb-0">Nº actividades: <strong id="numActividades">0</strong></p>
+          </div>
+        </div>
+
+        <div class="card shadow-sm p-3">
+          <h5>Formulario de Reserva</h5>
+          <form id="reservaForm" novalidate>
+            <div class="mb-2">
+              <label class="form-label">Nombre completo</label>
+              <input id="nombre" type="text" class="form-control" />
+              <div class="invalid-feedback" id="err-nombre"></div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Email</label>
+              <input id="email" type="email" class="form-control" />
+              <div class="invalid-feedback" id="err-email"></div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Fecha de inicio</label>
+              <input id="fechaInicio" type="date" class="form-control" />
+              <div class="invalid-feedback" id="err-fecha"></div>
+            </div>
+
+            <div class="mb-2">
+              <label class="form-label">Código de descuento</label>
+              <input id="codigo" type="text" class="form-control" placeholder="ABCD25" />
+              <div class="invalid-feedback" id="err-codigo"></div>
+            </div>
+
+            <div id="seguroWrapper" class="form-check mb-2" style="display:none;">
+              <input id="seguro" class="form-check-input" type="checkbox" />
+              <label class="form-check-label" for="seguro">Seguro de viaje (obligatorio si total &gt; 1000€)</label>
+              <div class="invalid-feedback" id="err-seguro"></div>
+            </div>
+
+            <div id="erroresGlobales" class="mb-2"></div>
+
+            <button type="submit" class="btn btn-success w-100">Confirmar Reserva</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+
+  <script src="datos/actividades.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

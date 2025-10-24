@@ -1,0 +1,21 @@
+.card-producto {
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.card-producto:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+#productos {
+  margin-top: 20px;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+  color: #6c757d !important;
+}

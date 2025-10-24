@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurador de Pizzas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍕 Configura tu Pizza</h1>
+
+
+    <section class="section">
+      <h2>Tamaño</h2>
+      <label><input type="radio" name="tamaño" value="10" checked> Pequeña (10€)</label><br>
+      <label><input type="radio" name="tamaño" value="12"> Mediana (12€)</label><br>
+      <label><input type="radio" name="tamaño" value="15"> Grande (15€)</label>
+    </section>
+
+   
+    <section class="section">
+      <h2>Ingredientes Extra</h2>
+      <label><input type="checkbox" class="extra" value="1"> Extra de queso (+1€)</label><br>
+      <label><input type="checkbox" class="extra" value="1.5"> Pepperoni (+1.5€)</label><br>
+      <label><input type="checkbox" class="extra" value="0.75"> Champiñones (+0.75€)</label><br>
+      <label><input type="checkbox" class="extra" value="1"> Piña (+1€)</label>
+    </section>
+
+    <section class="section">
+      <h2>Tipo de Masa</h2>
+      <select id="masa">
+        <option value="0">Fina (sin coste)</option>
+        <option value="1">Normal (+1€)</option>
+        <option value="2.5">Rellena de queso (+2.5€)</option>
+      </select>
+    </section>
+
+    
+    <section class="precio-section">
+      <h2>💰 Precio Total: <span id="precio">0.00</span> €</h2>
+    </section>
+
+    <button id="btnPedido">Realizar Pedido</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

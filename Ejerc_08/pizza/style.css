@@ -1,0 +1,57 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffe9c4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #e85d04;
+}
+
+.section {
+  margin: 20px 0;
+}
+
+h2 {
+  color: #6a040f;
+}
+
+#masa {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.precio-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#btnPedido {
+  display: block;
+  width: 100%;
+  background-color: #e85d04;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnPedido:hover {
+  background-color: #d9480f;
+}
