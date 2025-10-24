@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 - Generador de Tablas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Generador Dinámico de Tablas</h1>
+
+  <form id="formulario">
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apellido" placeholder="Apellido" required>
+    <button type="submit">Añadir Fila</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody id="tablaBody"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
