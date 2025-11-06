@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <aleacion>
+        <base>Hierro</base>
+        <mezcla>Carbono</mezcla>
+        <resultado>Acero</resultado>
+        <descripcion>Una aleación fuerte y versátil, usada durante siglos.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Cobre</base>
+        <mezcla>Estaño</mezcla>
+        <resultado>Bronce</resultado>
+        <descripcion>Más duro que el cobre, revolucionó la Edad de los Metales.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Aluminio</base>
+        <mezcla>Cobre</mezcla>
+        <resultado>Duraluminio</resultado>
+        <descripcion>Ligera y resistente, ideal para estructuras aeronáuticas.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Oro</base>
+        <mezcla>Plata</mezcla>
+        <resultado>Electrum</resultado>
+        <descripcion>Una aleación natural utilizada en monedas antiguas.</descripcion>
+    </aleacion>
+    <aleacion>
+        <base>Titanio</base>
+        <mezcla>Aluminio</mezcla>
+        <resultado>Tial</resultado>
+        <descripcion>Combinación de alta resis

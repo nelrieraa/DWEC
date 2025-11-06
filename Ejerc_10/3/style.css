@@ -1,0 +1,18 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#codigoMsg,
+#claveMsg {
+  font-weight: bold;
+}
+
+#codigoMsg.ok,
+#claveMsg.ok {
+  color: #00ff88;
+}
+
+#codigoMsg.error,
+#claveMsg.error {
+  color: #ff5555;
+}

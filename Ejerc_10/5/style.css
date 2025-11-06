@@ -1,0 +1,18 @@
+body {
+  background: linear-gradient(135deg, #111, #222);
+  min-height: 100vh;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+#historial li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#historial li:hover {
+  background-color: #0d6efd;
+  color: white;
+}

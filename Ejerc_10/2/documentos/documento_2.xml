@@ -1,0 +1,9 @@
+<documento>
+  <id>2</id>
+  <titulo>Declaración de los Derechos Humanos</titulo>
+  <fecha>1948</fecha>
+  <imagen>img/doc2.jpg</imagen>
+  <descripcion>Documento histórico que proclama los derechos fundamentales universales.</descripcion>
+  <siguiente>documentos/documento_ultimo.xml</siguiente>
+  <anterior>documentos/documento_1.xml</anterior>
+</documento>

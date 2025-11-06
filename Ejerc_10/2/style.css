@@ -1,0 +1,16 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#documento {
+  background: white;
+  border-radius: 10px;
+}
+
+#historial li {
+  cursor: pointer;
+}
+
+#historial li:hover {
+  background-color: #f0f0f0;
+}

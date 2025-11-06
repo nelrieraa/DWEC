@@ -1,0 +1,9 @@
+<documento>
+  <id>3</id>
+  <titulo>Constitución de 1978</titulo>
+  <fecha>1978</fecha>
+  <imagen>img/doc3.jpg</imagen>
+  <descripcion>Texto constitucional que marca el inicio de la democracia en España.</descripcion>
+  <siguiente>null</siguiente>
+  <anterior>documentos/documento_2.xml</anterior>
+</documento>

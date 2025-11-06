@@ -1,0 +1,16 @@
+
+body {
+  background: #f6f9ff;
+}
+header img {
+  filter: grayscale(30%) contrast(.9);
+}
+.card { box-shadow: 0 6px 18px rgba(19, 35, 71, 0.06); }
+.blink-error {
+  animation: blink-red 0.4s ease 0s 3;
+}
+@keyframes blink-red {
+  0% { outline: 3px solid rgba(220,53,69,0.0); }
+  50% { outline: 3px solid rgba(220,53,69,0.9); transform: translateY(-2px); }
+  100% { outline: 3px solid rgba(220,53,69,0.0); transform: translateY(0); }
+}
