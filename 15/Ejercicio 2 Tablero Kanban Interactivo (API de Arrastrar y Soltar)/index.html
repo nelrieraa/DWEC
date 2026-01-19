@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Pro - Drag & Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kanban-board">
+        <div class="column" data-status="todo">
+            <h3>Tareas por hacer</h3>
+            <div class="task-list">
+                <div class="task-card" draggable="true" id="task-1">
+                    <p>Diseñar mockup de la App</p>
+                </div>
+                <div class="task-card" draggable="true" id="task-2">
+                    <p>Configurar base de datos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column" data-status="in-progress">
+            <h3>En progreso</h3>
+            <div class="task-list">
+                <div class="task-card" draggable="true" id="task-3">
+                    <p>Integrar API de pagos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column" data-status="done">
+            <h3>Finalizado</h3>
+            <div class="task-list"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

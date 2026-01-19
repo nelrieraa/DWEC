@@ -1,0 +1,66 @@
+:root {
+    --bg-color: #e0e4e8;
+    --column-bg: #ebedf0;
+    --card-bg: #ffffff;
+    --primary-blue: #0079bf;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.column {
+    background-color: var(--column-bg);
+    border-radius: 8px;
+    width: 300px;
+    min-height: 200px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background 0.2s;
+}
+
+.column h3 {
+    margin: 0 0 10px 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.task-list {
+    min-height: 150px;
+}
+
+.task-card {
+    background-color: var(--card-bg);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    cursor: grab;
+    transition: transform 0.1s, opacity 0.1s;
+}
+
+.task-card p {
+    margin: 0;
+    pointer-events: none; 
+}
+
+
+.task-card.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+    border: 2px dashed var(--primary-blue);
+}
+
+.column.drag-over {
+    background-color: #d1d5db;
+    outline: 2px dashed var(--primary-blue);
+}
