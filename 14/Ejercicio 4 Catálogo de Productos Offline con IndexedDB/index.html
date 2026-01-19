@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Productos - Ejercicio 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Catálogo de Tecnología</h1>
+        <div class="theme-controls">
+            <button id="btn-light">Tema Claro</button>
+            <button id="btn-dark">Tema Oscuro</button>
+        </div>
+    </header>
+
+    <section class="controls">
+        <div class="filter-group">
+            <label for="category-select">Filtrar por categoría:</label>
+            <select id="category-select">
+                <option value="todas">Todas</option>
+            </select>
+        </div>
+
+        <div class="sort-group">
+            <button id="sort-asc" class="btn">Precio: Menor a Mayor</button>
+            <button id="sort-desc" class="btn">Precio: Mayor a Menor</button>
+        </div>
+        <button id="btn-update">actualizar</button>
+    </section>
+
+    <main id="products-container">
+        <p class="loading">Cargando productos...</p>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

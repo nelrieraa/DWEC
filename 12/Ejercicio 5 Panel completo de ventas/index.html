@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Ventas Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Panel de Control de Ventas</h1>
+            <div id="loader" class="loader">Cargando datos maestros...</div>
+            
+            <div class="selector-container hidden" id="main-controls">
+                <label for="user-select">Seleccionar Cliente:</label>
+                <select id="user-select">
+                    <option value="">-- Elige un usuario --</option>
+                </select>
+            </div>
+        </header>
+
+        <main id="dashboard" class="hidden">
+            <section class="top-panels">
+                <div class="card user-card" id="user-info">
+                    </div>
+                <div class="card summary-card" id="user-summary">
+                    </div>
+            </section>
+
+            <section class="orders-section">
+                <h2>Historial de Pedidos</h2>
+                <div id="orders-list">
+                    </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

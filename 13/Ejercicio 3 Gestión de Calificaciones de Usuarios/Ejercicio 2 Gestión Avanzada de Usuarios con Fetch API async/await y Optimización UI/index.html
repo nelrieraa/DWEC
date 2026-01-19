@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuarios - CrudCrud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Usuarios API</h1>
+
+        <div id="message-panel" class="hidden"></div>
+
+        <section class="form-section">
+            <h2 id="form-title">Añadir Nuevo Usuario</h2>
+            <form id="user-form">
+                <input type="hidden" id="user-id">
+                <div class="form-group">
+                    <input type="text" id="firstName" placeholder="Nombre" required>
+                    <input type="text" id="lastName" placeholder="Apellido" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Correo Electrónico" required>
+                    <input type="url" id="picture" placeholder="URL Imagen (Avatar)" required>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" id="btn-save">Guardar Usuario</button>
+                    <button type="button" id="btn-cancel" class="hidden">Cancelar Edición</button>
+                    <button type="button" id="btn-load-initial" class="secondary">Cargar Usuarios Iniciales</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Lista de Usuarios</h2>
+            <div class="table-container">
+                 <input type="text" id="input-busqueda" placeholder="Buscar por nombre...">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Avatar</th>
+                            <th>Nombre Completo</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <div id="modal-calificaciones" class="modal hidden">
+    <div class="modal-content">
+        <h3 id="modal-user-name">Calificaciones de: <span></span></h3>
+        <form id="form-calificaciones">
+            <input type="hidden" id="grade-user-id">
+            
+            <div class="grade-group">
+                <label>Matemáticas:</label> <input type="number" id="grade-math" step="0.1" min="0" max="10">
+                <label>Historia:</label> <input type="number" id="grade-hist" step="0.1" min="0" max="10">
+                <label>Ciencia:</label> <input type="number" id="grade-sci" step="0.1" min="0" max="10">
+                <label>Inglés:</label> <input type="number" id="grade-eng" step="0.1" min="0" max="10">
+                <label>Arte:</label> <input type="number" id="grade-art" step="0.1" min="0" max="10">
+            </div>
+
+            <div class="modal-buttons">
+                <button type="submit" class="primary">Guardar Notas</button>
+                <button type="button" id="btn-delete-grades" class="danger">Borrar Notas</button>
+                <button type="button" id="btn-close-modal" class="secondary">Cerrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

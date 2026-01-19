@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Pedidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Gestión de Clientes</h1>
+        </header>
+
+        <section class="search-box">
+            <form id="form-busqueda">
+                <input type="email" id="input-email" placeholder="Introduce el email del usuario..." required>
+                <button type="submit" id="btn-buscar">Buscar Pedidos</button>
+            </form>
+        </section>
+
+        <section id="mensaje-error" class="hidden"></section>
+
+        <main id="resultado-container">
+            </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
