@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador de Imágenes Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Procesador de Imágenes por Lotes</h1>
+
+        <div id="drop-zone" class="drop-zone">
+            <p>Arrastra tus imágenes aquí o haz clic para seleccionar</p>
+            <input type="file" id="file-input" multiple accept="image/*" hidden>
+        </div>
+
+        <section class="controls">
+            <h2>Configuración de Edición</h2>
+            <div class="grid-controls">
+                <div class="control-group">
+                    <label for="watermark-text">Marca de Agua:</label>
+                    <input type="text" id="watermark-text" placeholder="Ej: © Mi App">
+                </div>
+                <div class="control-group">
+                    <label for="max-width">Ancho Máximo (px):</label>
+                    <input type="number" id="max-width" placeholder="Ej: 800">
+                </div>
+                <div class="control-group">
+                    <label for="output-format">Formato:</label>
+                    <select id="output-format">
+                        <option value="image/jpeg">JPEG</option>
+                        <option value="image/png">PNG</option>
+                    </select>
+                </div>
+            </div>
+            <button id="btn-process" class="btn-main">Procesar Imágenes</button>
+        </section>
+
+        <section id="preview-container" class="preview-container">
+            </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
