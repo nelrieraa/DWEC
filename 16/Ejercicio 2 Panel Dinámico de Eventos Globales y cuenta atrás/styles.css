@@ -1,0 +1,9 @@
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a2e; color: #fff; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #16213e; border-radius: 12px; padding: 20px; border: 1px solid #0f3460; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); border-color: #e94560; }
+        .nombre { font-size: 1.25rem; font-weight: bold; color: #e94560; margin-bottom: 8px; }
+        .desc { font-size: 0.9rem; color: #95a5a6; margin-bottom: 15px; height: 40px; }
+        .countdown { font-family: 'Courier New', Courier, monospace; font-size: 1.1rem; background: #0f3460; padding: 10px; border-radius: 5px; text-align: center; }
+        .finalizado { color: #53354a; text-decoration: line-through; }
+        .badge-today { background: #4ecca3; color: #232931; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; float: right; }
