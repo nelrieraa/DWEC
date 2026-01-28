@@ -2,29 +2,35 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard de Auditoria de Ciberseguridad</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Auditoría - Ciberseguridad</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Security Log Monitor</h1>
+            <div class="summary-card">
+                <p>Consumo Total Acumulado:</p>
+                <span id="total-consumption">0.00</span> MB
+            </div>
+        </header>
 
-<div class="container">
-    <h1>Panel de Auditoria de Accesos</h1>
-    <div id="totalConsumo" class="summary">Cargando datos...</div>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>ID Sesion</th>
-                <th>Usuario</th>
-                <th>Consumo (MB)</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody id="logTableBody">
-            </tbody>
-    </table>
-</div>
-
-<script src="app.js"></script>
+        <main>
+            <table id="log-table">
+                <thead>
+                    <tr>
+                        <th>ID Sesión</th>
+                        <th>Usuario</th>
+                        <th>Consumo (MB)</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="log-body">
+                    </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
