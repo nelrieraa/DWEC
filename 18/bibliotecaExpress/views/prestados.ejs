@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Libros Prestados</title>
+</head>
+<body>
+    <h1>Libros Actualmente Prestados</h1>
+    <table border="1">
+        <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Prestatario</th>
+            <th>Fecha Devolución</th>
+        </tr>
+        <% prestados.forEach(p => { %>
+            <tr>
+                <td><%= p.titulo %></td>
+                <td><%= p.autor %></td>
+                <td>
+                    <a href="/prestamos/usuario?nombre=<%= encodeURIComponent(p.nombre_prestatario) %>">
+                        <%= p.nombre_prestatario %>
+                    </a>
+                </td>
+                <td><%= p.fecha_devolucion.toLocaleDateString() %></td>
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

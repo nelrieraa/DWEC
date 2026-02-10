@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Libros Vencidos</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Catálogo</a> | <a href="/prestados">Libros Prestados</a> | <a href="/vencidos">Vencidos</a>
+    </nav>
+
+    <h1 style="color: #dc3545;">🚨 Libros con Devolución Vencida</h1>
+    <p>Estos libros deberían haber sido entregados y siguen en manos del prestatario.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título del Libro</th>
+                <th>Prestatario</th>
+                <th>Fecha Límite de Devolución</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (vencidos.length > 0) { %>
+                <% vencidos.forEach(v => { %>
+                    <tr>
+                        <td><%= v.titulo %></td>
+                        <td><%= v.nombre_prestatario %></td>
+                        <td style="color: red; font-weight: bold;">
+                            <%= new Date(v.fecha_devolucion).toLocaleDateString() %>
+                        </td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="3" style="text-align: center;">No hay libros vencidos actualmente. ¡Todo al día!</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <br>
+    <a href="/" class="btn">Volver al Catálogo</a>
+</body>
+</html>
