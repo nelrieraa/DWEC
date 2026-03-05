@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/artistas">Volver a Artistas</a>
+    </nav>
+
+    <div class="card" style="display: flex; gap: 20px; align-items: center;">
+        <img src="<%= artista.foto %>" style="width:200px; border-radius:8px;">
+        <div>
+            <h1><%= artista.nombre %></h1>
+            <p><strong>País:</strong> <%= artista.pais %></p>
+            <p><strong>Género:</strong> <%= artista.genero %></p>
+            <p><strong>Desde:</strong> <%= artista.fecha_formacion %></p>
+        </div>
+    </div>
+
+    <h2>Álbumes de <%= artista.nombre %></h2>
+    <table>
+        <tr>
+            <th>Portada</th>
+            <th>Título</th>
+            <th>Año</th>
+        </tr>
+        <% albumesArtista.forEach(album => { %>
+        <tr>
+            <td><img src="<%= album.foto %>" class="img-thumb"></td>
+            <td><%= album.titulo %></td>
+            <td><%= album.anio %></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

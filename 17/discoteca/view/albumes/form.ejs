@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= (album.id) ? 'Editar' : 'Nuevo' %> Álbum</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/albumes">Álbumes</a>
+        <a href="/artistas">Artistas</a>
+    </nav>
+
+    <div class="card">
+        <h1><%= (album.id) ? 'Editar Álbum' : 'Nuevo Álbum' %></h1>
+
+        <% if (locals.error) { %>
+            <div class="error"><%= error %></div>
+        <% } %>
+
+        <form action="/album/save" method="POST">
+            <input type="hidden" name="id" value="<%= album.id || '' %>">
+
+            <label>Título del Álbum:</label><br>
+            <input type="text" name="titulo" value="<%= album.titulo || '' %>" required><br><br>
+
+            <label>Año de Lanzamiento:</label><br>
+            <input type="number" name="anio" value="<%= album.anio || '' %>" required><br><br>
+
+            <label>URL de la Foto:</label><br>
+            <input type="text" name="foto" value="<%= album.foto || 'https://picsum.photos/id/200/150/150' %>"><br><br>
+
+            <label>Artista:</label><br>
+            <select name="artistaId" required>
+                <option value="">Selecciona un artista</option>
+                <% artistas.forEach(art => { %>
+                    <option value="<%= art.id %>" <%= (album.artistaId == art.id) ? 'selected' : '' %>>
+                        <%= art.nombre %>
+                    </option>
+                <% }) %>
+            </select><br><br>
+
+            <button type="submit" class="btn btn-add">Guardar Álbum</button>
+            <a href="/albumes">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/albumes">Álbumes</a>
+    </nav>
+    <h1>Lista de Artistas</h1>
+    <a href="/artista/form" class="btn btn-add">Añadir Nuevo Artista</a>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <% artistas.forEach(artista => { %>
+            <div class="card" style="width: 200px; text-align: center;">
+                <img src="<%= artista.foto %>" class="img-thumb" style="width: 100px; height: 100px;">
+                <h3><a href="/artista/<%= artista.id %>"><%= artista.nombre %></a></h3>
+                <p><%= artista.pais %></p>
+                <div>
+                    <a href="/artista/form/<%= artista.id %>" class="btn btn-edit">📝</a>
+                    <a href="/artista/delete/<%= artista.id %>" class="btn btn-delete" onclick="return confirm('¿Eliminar artista y sus álbumes?')">🗑️</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>

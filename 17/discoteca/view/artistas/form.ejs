@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="/css/style.css"></head>
+<body>
+    <div class="card">
+        <h1><%= (artista.id) ? 'Editar Artista' : 'Nuevo Artista' %></h1>
+        <form action="/artista/save" method="POST">
+            <input type="hidden" name="id" value="<%= artista.id || '' %>">
+            
+            <label>Nombre:</label><br>
+            <input type="text" name="nombre" value="<%= artista.nombre || '' %>" required><br><br>
+
+            <label>País:</label><br>
+            <input type="text" name="pais" value="<%= artista.pais || '' %>"><br><br>
+
+            <label>Género:</label><br>
+            <input type="text" name="genero" value="<%= artista.genero || '' %>"><br><br>
+
+            <label>Año de Formación:</label><br>
+            <input type="number" name="fecha_formacion" value="<%= artista.fecha_formacion || '' %>"><br><br>
+
+            <label>URL Foto:</label><br>
+            <input type="text" name="foto" value="<%= artista.foto || 'https://picsum.photos/id/1/150/150' %>"><br><br>
+
+            <button type="submit" class="btn btn-add">Guardar</button>
+            <a href="/artistas">Volver</a>
+        </form>
+    </div>
+</body>
+</html>

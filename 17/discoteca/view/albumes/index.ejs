@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Álbumes</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Listado de Álbumes</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/artistas">Ver Artistas</a>
+        </nav>
+    </header>
+    <div class="container">
+        <a href="/album/form" class="btn">Añadir Nuevo Álbum</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Título</th>
+                    <th>Año</th>
+                    <th>Artista</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% albumes.forEach(album => { %>
+                <tr>
+                    <td><img src="<%= album.foto %>" alt="Foto de <%= album.titulo %>" class="thumb" onerror="this.src='https://via.placeholder.com/50'"></td>
+                    <td><%= album.titulo %></td>
+                    <td><%= album.anio %></td>
+                    <td><a href="/artista/<%= album.artistaId %>" style="color: #ff4081;"><%= album.nombreArtista %></a></td>
+                    <td>
+                        <a href="/album/form/<%= album.id %>" class="btn btn-small">Editar</a>
+                        <a href="/album/delete/<%= album.id %>" class="btn btn-danger btn-small" onclick="return confirm('¿Seguro que quieres borrar este álbum?');">Eliminar</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

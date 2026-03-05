@@ -1,0 +1,27 @@
+* { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #121212; color: #e0e0e0; margin: 0; padding: 0; }
+header { background-color: #1f1f1f; padding: 20px; text-align: center; border-bottom: 2px solid #ff4081; }
+nav a { color: #ff4081; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 1.1em; }
+nav a:hover { color: #fff; }
+.container { max-width: 1000px; margin: 30px auto; padding: 20px; background-color: #1e1e1e; border-radius: 8px; }
+h1, h2 { color: #fff; }
+.btn { display: inline-block; padding: 10px 15px; background-color: #ff4081; color: white; text-decoration: none; border-radius: 5px; border: none; cursor: pointer; }
+.btn:hover { background-color: #e03571; }
+.btn-danger { background-color: #dc3545; }
+.btn-danger:hover { background-color: #c82333; }
+.btn-small { padding: 5px 10px; font-size: 0.9em; }
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #333; }
+th { background-color: #2a2a2a; }
+img.thumb { width: 50px; height: 50px; border-radius: 5px; object-fit: cover; }
+img.large { width: 150px; height: 150px; border-radius: 8px; object-fit: cover; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
+.card { background-color: #2a2a2a; padding: 15px; border-radius: 8px; text-align: center; transition: transform 0.2s; }
+.card:hover { transform: translateY(-5px); }
+.card a { color: #fff; text-decoration: none; }
+.card img { margin-bottom: 10px; }
+.error-msg { background-color: #dc3545; color: white; padding: 10px; border-radius: 5px; margin-bottom: 15px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input, .form-group select { width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #444; background-color: #333; color: white; }
+.ficha-artista { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 30px; }
